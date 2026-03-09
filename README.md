@@ -50,12 +50,20 @@ The setup script clones all 4 sub-repos into the workspace directory and checks 
 
 ### 3. Open the workspace
 
+#### 3.1 From Command Line
 ```bash
 code construkted.code-workspace    # VS Code
 cursor construkted.code-workspace  # Cursor
 ```
 
-Or double-click `construkted.code-workspace` in your file explorer.
+#### 3.2 From File Explorer
+
+Double-click `construkted.code-workspace` in your file explorer.
+
+#### 3.3 From withing Cursor/VSCode
+
+File > Open Workspace from File... > select construkted.code-workspace
+
 
 ## Workspace Structure
 
