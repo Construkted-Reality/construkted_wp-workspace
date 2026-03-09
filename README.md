@@ -65,14 +65,10 @@ construkted_wp-workspace/
 ├── construkted.js/              ← sub-repo (cloned by setup script)
 ├── construkted.uploadjs/        ← sub-repo (cloned by setup script)
 ├── construkted_reality_v1.x/    ← sub-repo (cloned by setup script)
-├── wordpress/                   ← vanilla WordPress install (DDEV)
 ├── docs/                        ← cross-repo documentation
 │   ├── plans/                   ← feature/fix plans (shared across team)
 │   ├── brainstorms/             ← brainstorm documents
 │   └── research/                ← research notes
-├── agent-os/                    ← product standards and conventions
-│   ├── product/                 ← mission, roadmap, tech stack
-│   └── standards/               ← API, PHP, TypeScript, build standards
 ├── tests/                       ← workspace-level functional tests
 ├── AGENTS.md                    ← AI agent configuration and branch rules
 ├── construkted.code-workspace   ← VS Code / Cursor workspace file
