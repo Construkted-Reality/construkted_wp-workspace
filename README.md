@@ -62,7 +62,7 @@ Double-click `construkted.code-workspace` in your file explorer.
 
 #### 3.3 From withing Cursor/VSCode
 
-File > Open Workspace from File... > select construkted.code-workspace
+File > Open Workspace from File... > select `construkted.code-workspace`
 
 
 ## Workspace Structure
