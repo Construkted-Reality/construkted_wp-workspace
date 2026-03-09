@@ -1,0 +1,15 @@
+{
+  "name": "construkted-functional-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Workspace-level functional tests for Construkted Reality platform",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:wordpress": "vitest run wordpress/"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0",
+    "typescript": "^5.4.0"
+  }
+}
