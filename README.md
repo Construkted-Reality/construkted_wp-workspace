@@ -86,7 +86,9 @@ construkted_wp-workspace/
 
 ## docs/plans Convention
 
-AI tools and developers use `docs/plans/` to record feature plans and fix strategies. These files are committed to this repo and serve as historical context for future work.
+AI tools and developers use `docs/` to record feature plans and fix strategies. These files are committed to this repo and serve as historical context for future work.
+
+If `docs/` folders are generated inside any of the 4 repos, they should be manually moved to this root-workspace `docs/` folder. One location for all repos. 
 
 **Naming convention:**
 ```
