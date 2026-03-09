@@ -88,7 +88,11 @@ construkted_wp-workspace/
 
 AI tools and developers use `docs/` to record feature plans and fix strategies. These files are committed to this repo and serve as historical context for future work.
 
-If `docs/` folders are generated inside any of the 4 repos, they should be manually moved to this root-workspace `docs/` folder. One location for all repos. 
+If `docs/` folders are generated inside any of the 4 repos, they should be manually moved to this root-workspace `docs/` folder. One location for all repos.  
+
+The `AGENTS.md` file has further instructions on how the repos are structured, and instructions for AI agents on how to handle the creation of `docs/` artifacts.
+
+For Cursor, the file `.cursor/rules/workspace-docs.mdc` provides the instructions on how to operate.
 
 **Naming convention:**
 ```
