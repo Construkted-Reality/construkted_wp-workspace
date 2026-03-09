@@ -1,0 +1,6 @@
+services:
+  web:
+    volumes:
+      # Format: "Host Path (Outside Project):Container Path"
+      - "/home/outsider/Projects/Construkted_Reality/code/web/dev-site-01/construkted_reality_v1.x/wp-content/themes/gowatch:/var/www/html/wp-content/themes/gowatch"
+      - "../../construkted_reality_v1.x/wp-content/themes/gowatch-child:/var/www/html/wp-content/themes/gowatch-child"

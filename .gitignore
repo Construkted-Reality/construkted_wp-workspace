@@ -1,0 +1,28 @@
+# Sub-repos (each has its own git)
+construkted_api/
+construkted.js/
+construkted.uploadjs/
+construkted_reality_v1.x/
+
+# WordPress installation
+wordpress/
+
+# OpenCode / AI tooling
+.opencode/
+.private-journal/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local
