@@ -2,14 +2,14 @@
 
 ## Repository Overview
 
-This workspace contains three subfolders, each with its own independent git repository:
+This workspace contains four subfolders, each with its own independent git repository:
 
 | Repo | Working Branch | Production Branch |
 |------|---------------|-------------------|
 | `construkted_api` | `master` | `master` |
 | `construkted.js` | `develop` | `master` |
 | `construkted_reality_v1.x` | `develop` | `master` |
-| `constukted.uploadjs` | `main` | `main` |
+| `construkted.uploadjs` | `main` | `main` |
 
 ---
 
@@ -77,3 +77,33 @@ Follow conventional commit format:
 <footer>
 ```
 Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
+
+---
+
+## Documentation and Generated Files
+
+### Central docs/ folder rule
+
+All documentation, plans, brainstorms, research, and AI-generated files MUST be placed in the **workspace root** `docs/` folder — never inside a sub-repo folder.
+
+This applies regardless of which sub-repo you are currently working in. If you are editing files inside `construkted.js/` and need to create a plan, the plan goes in `docs/plans/`, not `construkted.js/docs/plans/`.
+
+```
+docs/
+├── plans/          ← feature and fix plans
+├── brainstorms/    ← brainstorm documents
+├── research/       ← research notes
+└── ...
+```
+
+**Naming convention for plans:**
+```
+docs/plans/{YYYY-MM-DD}-{type}-{short-description}-plan.md
+```
+
+**Naming convention for brainstorms:**
+```
+docs/brainstorms/{YYYY-MM-DD}-{topic}-brainstorm.md
+```
+
+This rule exists because the workspace root repo is the single source of truth for cross-repo documentation. The sub-repos are independent git repositories and should not contain workspace-level docs.

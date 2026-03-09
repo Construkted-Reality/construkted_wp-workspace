@@ -4,12 +4,12 @@ Shared workspace for the Construkted Reality web platform. This repo ties togeth
 
 ## Sub-Repositories
 
-| Repo | Description | Working Branch | Production Branch |
-|------|-------------|----------------|-------------------|
-| `construkted_api` | Processing server — converts 3D data into CesiumJS-compatible formats, exposes API endpoints | `master` | `master` |
-| `construkted.js` | TypeScript SDK — CesiumJS 3D viewer and interaction layer | `develop` | `master` |
-| `construkted.uploadjs` | Upload library | `main` | `main` |
-| `construkted_reality_v1.x` | WordPress theme — gowatch-child theme with PHP frontend | `develop` | `master` |
+| Repo | Description | Stack | Working Branch | Production Branch |
+|------|-------------|-------|----------------|-------------------|
+| `construkted_api` | 3D asset processing API — tiling pipelines, S3 uploads, task management | Express / TypeScript | `master` | `master` |
+| `construkted.js` | 3D globe viewer — CesiumJS/Three.js map, annotations, XR, navigation | CesiumJS / TypeScript | `develop` | `master` |
+| `construkted.uploadjs` | File upload widget — drag-and-drop upload UI for WordPress frontend | jQuery / TypeScript | `main` | `main` |
+| `construkted_reality_v1.x` | WordPress site — GoWatch child theme with project/album pages | PHP / WordPress | `develop` | `master` |
 
 These repos are **not** git submodules. They are independent clones that live inside this workspace directory and are ignored by the workspace's own `.gitignore`.
 

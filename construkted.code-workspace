@@ -11,23 +11,23 @@
 
   "folders": [
     {
-      "name": "workspace",
+      "name": "root workspace",
       "path": "."
     },
     {
-      "name": "api (Ruby/Rails)",
+      "name": "construkted_api - API processing",
       "path": "construkted_api"
     },
     {
-      "name": "js-sdk (TypeScript)",
+      "name": "construkted.js - all the site JS/TS code",
       "path": "construkted.js"
     },
     {
-      "name": "upload-js (TypeScript)",
+      "name": "construkted.uploadjs - upload related",
       "path": "construkted.uploadjs"
     },
     {
-      "name": "wp-theme (PHP)",
+      "name": "construkted_reality_v1.x - wp theme PHP",
       "path": "construkted_reality_v1.x"
     }
   ],
@@ -61,6 +61,7 @@
     // ── ESLint ──────────────────────────────────────────────────────────
     // Scope ESLint to JS/TS repos only so it resolves the right configs.
     "eslint.workingDirectories": [
+      { "directory": "construkted_api", "changeProcessCWD": true },
       { "directory": "construkted.js", "changeProcessCWD": true },
       { "directory": "construkted.uploadjs", "changeProcessCWD": true }
     ],
