@@ -1,0 +1,71 @@
+# Agent OS Standards Index
+
+api:
+  authentication:
+    description: X-Api-Key header authentication for WordPress REST API
+  callback-from-api:
+    description: construkted_api callback to WordPress control_asset_details.php with IP whitelisting
+  error-codes:
+    description: Categorized error codes (100-1000) with admin/user message structure
+  response-envelope:
+    description: Backend errCode/errMsg vs WordPress status/msg response formats
+  response-format:
+    description: http.send() response structure with errCode/errMsg format
+  status-codes:
+    description: Unified task status codes (QUEUED, RUNNING, FAILED, etc.) across projects
+  task-status-codes:
+    description: Task lifecycle status codes (10-60) and running sub-status codes synced with WordPress
+  tiling-strategy:
+    description: Strategy pattern for asset type processing (Mesh, PointCloud, Imagery, ExistingTiles)
+
+assets:
+  file-requirements:
+    description: Required files for each 3D asset type (OBJ/MTL, LAS/LAZ, TIF, etc.)
+  type-naming:
+    description: Asset type string formats across systems (PascalCase preferred)
+
+build:
+  construkted-js-output:
+    description: How construkted.js build output copies to WordPress theme via LOCAL_DEV_DIR
+  typescript-build-workflow:
+    description: Vite/Gulp build commands and auto-copy to WordPress theme
+  version-sync:
+    description: Keep version numbers synchronized across both repositories
+
+global:
+  php-class-prefixes:
+    description: CK_ or construkted_ prefix required for all custom PHP classes
+
+php:
+  ajax-handler-pattern:
+    description: WordPress AJAX endpoint registration and response handling
+  custom-post-types:
+    description: CPT registration with show_in_rest=false and lowercase singular names
+  localize-script-bridge:
+    description: Pass PHP data to JavaScript via wp_localize_script
+  post-meta-keys:
+    description: snake_case naming for post meta keys with legacy exception
+  post-meta-storage:
+    description: Asset data storage using WordPress post meta fields
+  singleton-class-pattern:
+    description: Static get_instance() factory pattern for all major PHP classes
+
+task-processing:
+  queue-system:
+    description: Dual queue system (50 general, 5 CPU-intensive) for task concurrency
+  task-lifecycle:
+    description: Task state transitions and terminal states (FAILED, COMPLETED, CANCELED)
+  tiling-strategies:
+    description: Strategy pattern for processing different 3D asset types
+
+typescript:
+  ajax-bridge-pattern:
+    description: CONSTRUKTED_AJAX global and jQuery AJAX communication with WordPress
+  asset-class-hierarchy:
+    description: Abstract Asset base class for 3D tiles, point clouds, orthomosaics
+  cesium-event-pattern:
+    description: Cesium Event class for reactive property change notifications
+  map-tool-pattern:
+    description: Abstract MapTool base class for interactive canvas tools
+  viewer-architecture:
+    description: Singleton Construkted class and viewer type detection

@@ -1,0 +1,83 @@
+{
+  // Construkted Workspace
+  //
+  // Open this file in VS Code or Cursor:
+  //   code construkted.code-workspace
+  //   cursor construkted.code-workspace
+  //
+  // The workspace root contains shared docs, plans, and AI agent configs.
+  // Each sub-repo is listed as a separate folder so language servers,
+  // linters, and git integrations are scoped correctly.
+
+  "folders": [
+    {
+      "name": "workspace",
+      "path": "."
+    },
+    {
+      "name": "api (Ruby/Rails)",
+      "path": "construkted_api"
+    },
+    {
+      "name": "js-sdk (TypeScript)",
+      "path": "construkted.js"
+    },
+    {
+      "name": "upload-js (TypeScript)",
+      "path": "construkted.uploadjs"
+    },
+    {
+      "name": "wp-theme (PHP)",
+      "path": "construkted_reality_v1.x"
+    }
+  ],
+
+  "settings": {
+    // ── Search ──────────────────────────────────────────────────────────
+    // When searching from the "workspace" root folder, exclude sub-repos
+    // to avoid duplicate results (they're already searchable as their own
+    // workspace folders).
+    "search.exclude": {
+      "construkted_api/**": true,
+      "construkted.js/**": true,
+      "construkted.uploadjs/**": true,
+      "construkted_reality_v1.x/**": true,
+      "wordpress/**": true,
+      "**/node_modules/**": true
+    },
+
+    // ── File watcher ────────────────────────────────────────────────────
+    // Same exclusions for the file watcher to reduce CPU/memory usage.
+    "files.watcherExclude": {
+      "construkted_api/**": true,
+      "construkted.js/**": true,
+      "construkted.uploadjs/**": true,
+      "construkted_reality_v1.x/**": true,
+      "**/node_modules/**": true,
+      "**/vendor/**": true,
+      "**/.git/objects/**": true
+    },
+
+    // ── ESLint ──────────────────────────────────────────────────────────
+    // Scope ESLint to JS/TS repos only so it resolves the right configs.
+    "eslint.workingDirectories": [
+      { "directory": "construkted.js", "changeProcessCWD": true },
+      { "directory": "construkted.uploadjs", "changeProcessCWD": true }
+    ],
+
+    // ── Git ─────────────────────────────────────────────────────────────
+    "git.autoRepositoryDetection": true,
+    "git.repositoryScanMaxDepth": 1
+  },
+
+  // ── Extension recommendations ───────────────────────────────────────────
+  // These are suggestions, not requirements. VS Code will prompt to install.
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bmewburn.vscode-intelephense-client",
+      "xdebug.php-debug"
+    ]
+  }
+}
